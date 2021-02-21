@@ -13,8 +13,9 @@ class GithubController:
 		self.PATH = '/README.md'
 	def get_data():
 		contents = self.repo.get_contents(self.PATH, 'master')
-        self.PATH = contents.path
-        self.SHA = contents.sha
+		if contents :
+        	self.PATH = contents.path
+        	self.SHA = contents.sha
         base = contents.content
         base = base.replace('\n', '')
         self.file_content = base64.b64decode(base).decode('utf-8')
@@ -23,7 +24,6 @@ class GithubController:
             pass
         else:
 			self.repo.update_file('.','action: Update File Count :zap:',content)
-			
 def createRow(fileType,number):
 	return '<tr><td>'+str(fileType)+'</td><td>'+str(number)+'</td></tr>'
 
