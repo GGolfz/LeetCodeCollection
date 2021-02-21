@@ -2,7 +2,9 @@ import os
 import github
 import base64
 
-detail = '''# GGolfz's Leetcode Collection <br>'''
+detail = '''# GGolfz's Leetcode Collection
+
+'''
 head = '<table><tr><td>File Type</td><td>Number</td></tr>'
 tail = '</table>'
 data = dict()
