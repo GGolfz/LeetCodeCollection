@@ -1,5 +1,6 @@
 import os
 import github
+import base64
 
 detail = '''# GGolfz's Leetcode Collection <br>'''
 head = '<table><tr><td>File Type</td><td>Number</td></tr>'
