@@ -21,7 +21,7 @@ class GithubController:
 		self.file_content = base64.b64decode(base).decode('utf-8')
 	def write_data(self,content):
 		if content != self.file_content:
-			self.repo.update_file(self.PATH,'action: Update File Count :zap:',content,self.SHA,'master')
+			self.repo.update_file(self.PATH,'action: Update File Count :zap:',content,self.SHA)
 def createRow(fileType,number):
 	return '<tr><td>'+str(fileType)+'</td><td>'+str(number)+'</td></tr>'
 
@@ -57,7 +57,7 @@ def modifyData():
 
 def main():
 	countFile()
-	ACCESS_TOKEN = os.getenv('INPUT_{}'.format('ACCESS_TOKEN').upper())
+	ACCESS_TOKEN = '2f9c008996c93e66e0c14d6faa710ca9a4455d1c'
 	controller = GithubController(ACCESS_TOKEN)
 	controller.get_data()
 	content = modifyData()
