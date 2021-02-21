@@ -56,7 +56,7 @@ def modifyData():
 
 def main():
 	countFile()
-	ACCESS_TOKEN = 'a559ceb0e67e710b0c8118665d4e24d51babd8c6'
+	ACCESS_TOKEN = os.getenv('INPUT_{}'.format('ACCESS_TOKEN').upper())
 	controller = GithubController(ACCESS_TOKEN)
 	controller.get_data()
 	content = modifyData()
