@@ -21,7 +21,7 @@ class GithubController:
 		self.file_content = base64.b64decode(base).decode('utf-8')
 	def write_data(self,content):
 		if content != self.file_content:
-			self.repo.update_file('.','action: Update File Count :zap:',content)
+			self.repo.update_file('.','action: Update File Count :zap:',content,self.SHA,'master')
 def createRow(fileType,number):
 	return '<tr><td>'+str(fileType)+'</td><td>'+str(number)+'</td></tr>'
 
