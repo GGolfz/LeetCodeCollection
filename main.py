@@ -9,20 +9,17 @@ sumFile = 0
 class GithubController:
 	def __init__(self, ACCESS_TOKEN):
 		g = github.Github(ACCESS_TOKEN)
-		self.repo = g.get_repo('LeetCodeCollection')
+		self.repo = g.get_repo('ggolfz/LeetCodeCollection')
 		self.PATH = '/README.md'
-	def get_data():
-		contents = self.repo.get_contents(self.PATH, 'master')
-		if contents :
-        	self.PATH = contents.path
-        	self.SHA = contents.sha
-        base = contents.content
-        base = base.replace('\n', '')
-        self.file_content = base64.b64decode(base).decode('utf-8')
+	def get_data(self):
+		contents = self.repo.get_contents(self.PATH, 'master')		
+		self.PATH = contents.path
+		self.SHA = contents.sha
+		base = contents.content
+		base = base.replace('\n', '')
+		self.file_content = base64.b64decode(base).decode('utf-8')
 	def write_data(self,content):
-		if content == self.file_content:
-            pass
-        else:
+		if content != self.file_content:
 			self.repo.update_file('.','action: Update File Count :zap:',content)
 def createRow(fileType,number):
 	return '<tr><td>'+str(fileType)+'</td><td>'+str(number)+'</td></tr>'
@@ -59,7 +56,7 @@ def modifyData():
 
 def main():
 	countFile()
-	ACCESS_TOKEN = os.getenv('INPUT_{}'.format('ACCESS_TOKEN').upper())
+	ACCESS_TOKEN = 'a559ceb0e67e710b0c8118665d4e24d51babd8c6'
 	controller = GithubController(ACCESS_TOKEN)
 	controller.get_data()
 	content = modifyData()
