@@ -36,11 +36,12 @@ def countFile():
 				i = i.split('.')
 				if len(i) > 1:
 					i = i[1]
-					sumFile+=1
-					if i in data:
-						data[i] += 1
-					else:
-						data[i] = 1
+					if i != 'md':
+						sumFile+=1
+						if i in data:
+							data[i] += 1
+						else:
+							data[i] = 1
 		else:
 			pass
 
