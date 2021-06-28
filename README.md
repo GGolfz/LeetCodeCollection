@@ -1,3 +1,3 @@
 # GGolfz's Leetcode Collection
 
-<table><tr><td>File Type</td><td>Number</td></tr><tr><td>js</td><td>118</td></tr><tr><td>rb</td><td>14</td></tr><tr><td>py</td><td>7</td></tr><tr><td>swift</td><td>2</td></tr><tr><td>sql</td><td>11</td></tr><tr><td>sh</td><td>3</td></tr><tr><td>cpp</td><td>1</td></tr><tr><td>Sum</td><td>156</td></tr></table>
+<table><tr><td>File Type</td><td>Number</td></tr><tr><td>js</td><td>119</td></tr><tr><td>rb</td><td>14</td></tr><tr><td>py</td><td>7</td></tr><tr><td>swift</td><td>2</td></tr><tr><td>sql</td><td>11</td></tr><tr><td>sh</td><td>3</td></tr><tr><td>cpp</td><td>1</td></tr><tr><td>Sum</td><td>157</td></tr></table>
